@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PDFremix</title>
+								
+				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-UyE3ica+x8ElIvIarGcXqD5Z2Qw/UgsZOlb2dq+nkyE='; style-src 'self';">
+				<link href="bootstrap.min-7455058a.css" integrity="sha256-fLoneO05IC78zwAKLI4iUsr2IP6QBh81/XOugeX3eA8=" rel="stylesheet">
+				<link href="custom-b0100812.css" integrity="sha256-2Yjo3rUMZuZfc40eOG3RGLhMvmu+dvcmMM6nSzJUWeU=" rel="stylesheet">
+				<script>window.ENV={"worker":"worker-94c1bea5.js"}</script>
+				<script src="app-480fc88c.js" integrity="sha256-nIt5mfNhIB/LpV1gxpNq60dFRXMU7MNVGlgK1lQjaW8="></script>
+			
+		<template id="pageset-template">
+			<div class="list-group-item">
+				<div class="row">
+					<div class="col-md-6 col-12 form-text">
+						<span class="val-name mr-3"></span>
+						<span class="val-info"></span>
+					</div>
+					<div class="col-md-4 col-10">
+						<label class="sr-only">Pages</label>
+						<input type="text" class="form-control val-pages mr-2" disabled="disabled">
+					</div>
+				</div>
+			</div>
+		</template>
+	</head>
+	<body>
+		<nav class="navbar navbar-light bg-warning mb-1">
+			<div class="container">
+				<a class="navbar-brand" href="#">PDF<sup><i>remix</i></sup></a>
+				<span class="ml-4"><b>WARNING</b> This project is in ALPHA. There be dragons...</span>
+				<button class="btn btn-outline-success" type="button" id="generate">Generate</button>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="list-group" id="pages-list">
+			</div>
+
+			<hr>
+			<p class="text-muted">
+			Drag a file onto this pane or click
+			<input type="file" id="filePicker" multiple="multiple" accept="application/pdf" class="d-none" />
+			<a href="#" id="filePickerTriggerLink">here</a>
+			to open a window to select one and
+			have it selectable here.
+			</p>
+		</div>
+	</body>
+</html>
