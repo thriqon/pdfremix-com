@@ -1,0 +1,21 @@
+.list-group {
+	overflow-x: hidden;
+}
+
+li {
+	user-select: none;
+	position: relative;
+}
+
+.slip-reordering {
+	box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+}
+
+.dnd {
+	border: 3px dashed grey;
+}
+
+html, body {
+	min-height: 100vh;
+	min-width: 100vw;
+}

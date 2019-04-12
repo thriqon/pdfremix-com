@@ -3,14 +3,17 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Reorganize pages from multiple PDF files into a new document with PDFremix">
 		<title>PDFremix</title>
-								
-				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-UyE3ica+x8ElIvIarGcXqD5Z2Qw/UgsZOlb2dq+nkyE='; style-src 'self';">
-				<link href="bootstrap.min-7455058a.css" integrity="sha256-fLoneO05IC78zwAKLI4iUsr2IP6QBh81/XOugeX3eA8=" rel="stylesheet">
-				<link href="custom-b0100812.css" integrity="sha256-2Yjo3rUMZuZfc40eOG3RGLhMvmu+dvcmMM6nSzJUWeU=" rel="stylesheet">
-				<script>window.ENV={"worker":"worker-94c1bea5.js"}</script>
-				<script src="app-480fc88c.js" integrity="sha256-nIt5mfNhIB/LpV1gxpNq60dFRXMU7MNVGlgK1lQjaW8="></script>
-			
+		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-JM2GQPhok+gB97JM16df68gvjXd9WzIUqTP7kvPAO88=' 'unsafe-eval' ; style-src 'self'; manifest-src 'self'; img-src 'self';">
+
+		<link href="/manifest.json" rel="manifest">
+		<link href="images/icons/icon-32x32.png" rel="icon" type="image/png">
+		<link href="favicon.ico" rel="icon" type="image/x-icon">
+		<link href="bootstrap-5f7780f.css" rel="stylesheet" integrity="sha256-fLoneO05IC78zwAKLI4iUsr2IP6QBh81/XOugeX3eA8=">
+		<link href="custom-eaf9cd9.css" rel="stylesheet" integrity="sha256-4eTS34pWLqZhX8CKGfGz5RDsvYb0MVZH8enz5f6vnNk=">
+		<script>window.ENV={"worker":"wrk-6375822.js","sw":"service-worker.js"}</script>
+		<script src="app-6897251.js" integrity="sha256-B0kUIA0/kWiMsaPJs0uDTrrAvoK9VcLWQI1uSDaJclE="></script>
 		<template id="pageset-template">
 			<div class="list-group-item">
 				<div class="row">
@@ -25,9 +28,10 @@
 				</div>
 			</div>
 		</template>
+		<meta name="theme-color" content="#003d81">
 	</head>
 	<body>
-		<nav class="navbar navbar-light bg-warning mb-1">
+		<nav class="navbar navbar-light bg-warning mb-1" role="banner">
 			<div class="container">
 				<a class="navbar-brand" href="#">PDF<sup><i>remix</i></sup></a>
 				<span class="ml-4"><b>WARNING</b> This project is in ALPHA. There be dragons...</span>
@@ -35,7 +39,7 @@
 			</div>
 		</nav>
 
-		<div class="container">
+		<div class="non-dnd container" role="main">
 			<div class="list-group" id="pages-list">
 			</div>
 
@@ -47,6 +51,10 @@
 			to open a window to select one and
 			have it selectable here.
 			</p>
+		</div>
+		<div class="dnd text-center d-none">
+			<span class="display-3">+</span>
+			<p>Drop PDF files to add to the list</p>
 		</div>
 	</body>
 </html>
